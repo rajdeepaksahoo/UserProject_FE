@@ -1,0 +1,22 @@
+
+td{
+    padding:30px ;
+    padding-bottom: 5px;  
+}
+
+.btn
+{
+    margin-left: 8px;
+}
+th{
+    border-bottom: 1px solid black;
+    padding:30px ;
+    padding-bottom: 5px;
+}
+#mainSearch{
+    display: flex;
+    justify-content: center;
+}
+mat-form-field{
+    padding: 20px;
+}

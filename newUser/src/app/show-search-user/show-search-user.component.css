@@ -1,0 +1,9 @@
+#so{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+th,td{
+    padding: 20px;
+    text-align: center;
+}
