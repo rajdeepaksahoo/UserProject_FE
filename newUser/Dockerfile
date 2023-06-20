@@ -1,5 +1,20 @@
-FROM portainer/angular-builder
-COPY . /app
+FROM node:16-alpine
+
 WORKDIR /app
-EXPOSE 4200
-RUN 'ng serve'
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+FROM nginx:1.21-alpine
+
+COPY --from=0 /app/dist/* /usr/share/nginx/html
+
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
