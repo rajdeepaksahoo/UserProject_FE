@@ -8,7 +8,7 @@ RUN mvn -B dependency:resolve
 
 COPY src ./src
 
-RUN mvn -B package
+RUN mvn clean package -DskipTests
 
 FROM openjdk:11
 
