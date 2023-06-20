@@ -17,7 +17,7 @@ services:
       context: ./user
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - 8084:8084
     depends_on:
       - db
     networks:

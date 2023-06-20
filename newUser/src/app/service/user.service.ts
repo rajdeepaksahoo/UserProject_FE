@@ -10,7 +10,7 @@ export class UserService {
   
   userId:String
 
-  private url="http://backend:8084/user"
+  private url="http://localhost:8084/user"
   id: number;
   constructor(private http:HttpClient) { }
 
