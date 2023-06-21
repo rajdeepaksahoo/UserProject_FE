@@ -16,7 +16,7 @@ import java.util.Optional;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@CrossOrigin("http://localhost:4200/")
+@CrossOrigin(origins={"*"})
 @RequestMapping(path = "/user")
 public class UserController {
     @Autowired
@@ -54,7 +54,6 @@ public class UserController {
         service.updateUsers(user);
         return ResponseEntity.ok(m);
     }
-    @CrossOrigin("http://localhost:4200/")
 
     @DeleteMapping(path = "/delete/{userId}")
     public ResponseEntity<Map<String, HttpStatus>> deleteUser(@PathVariable String userId) {
