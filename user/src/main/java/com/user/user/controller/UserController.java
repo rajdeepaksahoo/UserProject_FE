@@ -16,7 +16,7 @@ import java.util.Optional;
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins={"*"})
 @RequestMapping(path = "/user")
 public class UserController {
     @Autowired
